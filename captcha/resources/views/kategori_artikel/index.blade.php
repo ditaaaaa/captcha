@@ -29,6 +29,11 @@
                             <td>{!!$kategori->nama!!}</td>
                             <td>{!!$kategori->created_at!!}</td>
                             <td>{!!$kategori->updated_at!!}</td>
+                            <td>
+                                <a href="{!! route('kategori_artikel.show', [$kategori->id]) !!}" class="btn btn-sm btn-success">
+                                    Lihat
+                                </a>
+                            </td>
                         </tr>
                         @endforeach
                     </table>
