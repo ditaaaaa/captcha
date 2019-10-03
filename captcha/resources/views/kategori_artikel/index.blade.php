@@ -5,22 +5,19 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">List Kategori Artikel</div>
 
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+                    <a href="{!! route('kategori_artikel.create') !!}" class="btn btn-primary">Tambah Data</a>
+
                     <table border="1">
                         <tr>
-                            <td>id</td>
-                            <td>user_id</td>
-                            <td>nama</td>
-                            <td>create_at</td>
-                            <td>update_at</td>
-                            <td>aksi</td>
+                            <td>Id</td>
+                            <td>User Id</td>
+                            <td>Nama</td>
+                            <td>Create_at</td>
+                            <td>Update_at</td>
+                            <td>Aksi</td>
                         </tr>
                         @foreach($listkategoriartikel as $kategori)
                         <tr>

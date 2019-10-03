@@ -13,9 +13,19 @@ class KategoriArtikelController extends Controller
     }
 
     public function show($id){
-    	$KategoriArtikel=kategori_artikel::where('id',$id)->first();
+    	//$KategoriArtikel=kategori_artikel::where('id',$id)->first();
     	$KategoriArtikel=kategori_artikel::find($id);
-    	
     	return view ('kategori_artikel.show',compact('KategoriArtikel'));
+    }
+
+    public function create(){
+    	return view ('kategori_artikel.create');
+    }
+
+    public function store(Request $request){
+    	$input= $request->all();
+    	kategori_artikel::create($input);
+    	//dd($input);
+    		return redirect('/kategori_artikel');
     }
 }
