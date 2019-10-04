@@ -25,13 +25,8 @@
 						</div>
 
 						<div class="form-group row">
-							<label class="col-md-4 col-from-label text-md-right">Kategori</label>
-							<label class="col-md-8 col-from-label text-md-left">{!! $Artikel->kategori !!}</label>
-						</div>
-
-						<div class="form-group row">
 							<label class="col-md-4 col-from-label text-md-right">User Id</label>
-							<label class="col-md-8 col-from-label text-md-left">{!! $Artikel->user_id !!}</label>
+							<label class="col-md-8 col-from-label text-md-left">{!! $Artikel->users_id !!}</label>
 						</div>
 
 						<div class="form-group row">
@@ -39,9 +34,19 @@
 							<label class="col-md-8 col-from-label text-md-left">{!! $Artikel->created_at !!}</label>
 						</div>
 
+						<div class="form-group row">
+							<label class="col-md-4 col-from-label text-md-right">Update</label>
+							<label class="col-md-8 col-from-label text-md-left">{!! $Artikel->updated_at !!}</label>
+						</div>
+
+						<div class="form-group row">
+							<label class="col-md-4 col-from-label text-md-right">Kategori Artikel</label>
+							<label class="col-md-8 col-from-label text-md-left">{!! $Artikel->kategori_artikel_id !!}</label>
+						</div>
+
 						<div class="from-group row mb-0">
 							<div class="col-md-6 offset-md-4">
-								<a href="{!! route('kategori_artikel.index') !!}" class="btn btn-primary">
+								<a href="{!! route('artikel.index') !!}" class="btn btn-primary">
 									Back
 								</a>
 							</div>

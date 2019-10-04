@@ -33,7 +33,25 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
+                        @auth
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    Master Data <span class="caret"></span>
+                                </a> 
+    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+    <a class="dropdown-item" href="{{ route('kategori_artikel.index') }}">{{ __('Kategori Artikel') }}</a>
+    <a class="dropdown-item" href="{{ route('artikel.index') }}">{{ __('Artikel') }}</a>
+                                </div>
+                            </li>
 
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="{{ route('kategori_artikel.index') }}">{{ __('Kategori Artikel') }}</a>
+                        </li>
+
+                         <li class="nav-item">
+                            <a class="nav-link" href="{{ route('artikel.index') }}">{{ __('Artikel') }}</a>
+                        </li> -->
+                        @endauth
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -77,6 +95,6 @@
         </main>
     </div>
     <script  src="https://code.jquery.com/jquery-3.4.1.js"  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="  crossorigin="anonymous"></script>
-       
+       @yield('scripts')
 </body>
 </html>

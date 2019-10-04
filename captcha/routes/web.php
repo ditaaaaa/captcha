@@ -21,7 +21,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('refreshcaptcha', 'HomeController@refreshCaptcha')->name('refresh_captcha');
+Route::get('/refresh_captcha', 'HomeController@refreshCaptcha')->name('refresh_captcha');
+
 Route::get('/kategori_artikel', 'KategoriArtikelController@index')->name('kategori_artikel.index');
 Route::get('/kategori_artikel/create','KategoriArtikelController@create')->name('kategori_artikel.create');
 Route::post('/kategori_artikel/store','KategoriArtikelController@store')->name('kategori_artikel.store');
