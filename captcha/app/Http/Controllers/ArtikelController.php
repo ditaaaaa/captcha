@@ -13,7 +13,6 @@ class ArtikelController extends Controller
     	return view ('artikel.index',compact('listartikel'));
     }
      public function show($id){
-    	//$KategoriArtikel=kategori_artikel::where('id',$id)->first();
     	$Artikel=artikel::find($id);
     	return view ('artikel.show',compact('Artikel'));
     }

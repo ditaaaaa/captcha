@@ -26,31 +26,23 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
-                </button>
+                    </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-                        @auth
+                <ul class="navbar-nav mr-auto">
+                    @auth
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     Master Data <span class="caret"></span>
-                                </a> 
-    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-    <a class="dropdown-item" href="{{ route('kategori_artikel.index') }}">{{ __('Kategori Artikel') }}</a>
-    <a class="dropdown-item" href="{{ route('artikel.index') }}">{{ __('Artikel') }}</a>
+                            </a> 
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('artikel.index') }}">{{ __('Artikel') }}</a>
+                            <a class="dropdown-item" href="{{ route('kategori_artikel.index') }}">{{ __('Kategori Artikel') }}</a>
                                 </div>
                             </li>
-
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" href="{{ route('kategori_artikel.index') }}">{{ __('Kategori Artikel') }}</a>
-                        </li>
-
-                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('artikel.index') }}">{{ __('Artikel') }}</a>
-                        </li> -->
                         @endauth
                     </ul>
 
