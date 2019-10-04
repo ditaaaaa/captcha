@@ -23,13 +23,13 @@
                         </tr>
                         @foreach($listberita as $berita)
                         <tr>
-                            <td>{!!$artikel->id!!}</td>
-                            <td>{!!$artikel->judul!!}</td>
-                            <td>{!!$artikel->isi!!}</td>
-                            <td>{!!$artikel->users_id!!}</td>
-                            <td>{!!$artikel->created_at!!}</td>
-                            <td>{!!$artikel->updated_at!!}</td>
-                            <td>{!!$artikel->kategori_berita_id!!}</td>
+                            <td>{!!$berita->id!!}</td>
+                            <td>{!!$berita->judul!!}</td>
+                            <td>{!!$berita->isi!!}</td>
+                            <td>{!!$berita->users_id!!}</td>
+                            <td>{!!$berita->created_at!!}</td>
+                            <td>{!!$berita->updated_at!!}</td>
+                            <td>{!!$berita->kategori_berita_id!!}</td>
                             <td>
                                 <a href="{!! route('berita.show', [$berita->id]) !!}" class="btn btn-sm btn-success">
                                     Lihat

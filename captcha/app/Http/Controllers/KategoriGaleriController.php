@@ -25,7 +25,7 @@ class KategoriGaleriController extends Controller
     	$input= $request->all();
     	KategoriGaleri::create($input);
     	
-        return redirect('/KategoriGaleri');
+        return redirect('/kategori_galeri');
     }
 }
 }

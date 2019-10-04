@@ -18,8 +18,8 @@ class PengumumanController extends Controller
     }
 
     public function create(){
-    	$Pengumuman=Pengumuman::pluck('nama', 'id');
-    	return view ('pengumuman.create',compact('Pengumuman'));
+    	$KategoriPengumuman=KategoriPengumuman::pluck('nama', 'id');
+    	return view ('pengumuman.create',compact('KategoriPengumuman'));
     }
 
     public function store(Request $request){

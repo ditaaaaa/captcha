@@ -25,7 +25,6 @@ class KategoriPengumumanController extends Controller
     	$input= $request->all();
     	KategoriPengumuman::create($input);
     	
-        return redirect('/KategoriPengumuman');
+        return redirect('/kategori_pengumuman');
     }
-}
 }

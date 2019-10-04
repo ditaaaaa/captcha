@@ -25,6 +25,6 @@ class KategoriBeritaController extends Controller
     	$input= $request->all();
     	KategoriBerita::create($input);
     	
-        return redirect('/KategoriBerita');
+        return redirect('/kategori_berita');
     }
 }
