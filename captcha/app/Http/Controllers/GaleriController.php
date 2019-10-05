@@ -14,12 +14,12 @@ class GaleriController extends Controller
     }
      public function show($id){
     	$Galeri=Galeri::find($id);
-    	return view ('galeri.show',compact('Galeri'));
+    	return view ('galeri.show',compact('KategoriGaleri'));
     }
 
     public function create(){
-    	$Galeri=Galeri::pluck('nama', 'id');
-    	return view ('galeri.create',compact('Galeri'));
+    	$KategoriGaleri=KategoriGaleri::pluck('nama', 'id');
+    	return view ('galeri.create',compact('KategoriGaleri'));
     }
 
     public function store(Request $request){

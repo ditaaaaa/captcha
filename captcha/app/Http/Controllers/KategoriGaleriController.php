@@ -28,4 +28,3 @@ class KategoriGaleriController extends Controller
         return redirect('/kategori_galeri');
     }
 }
-}
