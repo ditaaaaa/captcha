@@ -16,7 +16,7 @@ class CreateKategoriArtikelTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('nama');
-			$table->bigInteger('users_id')->unsigned()->index('fk_kategori_users_idx');
+			$table->bigInteger('users_id')->unsigned()->index('fk_kategori_users_idx')->onDelete('cascade');
 			$table->timestamps();
 		});
 	}

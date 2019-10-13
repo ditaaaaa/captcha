@@ -34,6 +34,9 @@
                                 <a href="{!! route('artikel.show', [$artikel->id]) !!}" class="btn btn-sm btn-success">
                                     Lihat
                                 </a>
+
+                                <a href="{!! route('kategori_artikel.edit', [$artikel->id]) !!}" class="btn btn-sm btn-warning">
+                                    Ubah
                             </td>
                         </tr>
                         @endforeach
